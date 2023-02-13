@@ -1,12 +1,31 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Redirect, useParams } from 'react-router-dom';
+import { useUser } from '../../../context/UserContext.js';
+import { authUser } from '../../../services/auth.js';
 
 export default function Auth() {
-  // TODO: initialize state
+  // initialize state
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { type } = useParams();
+  const { user, setUser } = useUser();
 
   // TODO: send users to Inventory/
+  if (user) {
+    return <Redirect to="/inventory" />;
+  }
 
-  // TODO: form submit function to send info to Supabase
+  // form submit function to send info to Supabase
+  const submitAuth = async (e) => {
+    e.preventDefault();
+    try {
+      const newUser = await authUser(email, password, type);
+      setUser(newUser);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   return (
     <div>
@@ -19,16 +38,20 @@ export default function Auth() {
         <NavLink to="/auth/sign-up">Sign up</NavLink>
       </nav>
 
-      <form>
+      <form onSubmit={submitAuth}>
         {/* email fieldset */}
         <fieldset>
           <label>Email</label>
-          <input type="email"></input>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
         </fieldset>
         {/* password fieldset */}
         <fieldset>
           <label>Password</label>
-          <input type="password"></input>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
         </fieldset>
         {/* button */}
         <button type="submit">Submit</button>

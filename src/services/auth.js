@@ -11,7 +11,7 @@ export async function authUser(email, password, type) {
   if (type === 'sign-up') {
     response = await client.auth.signUp({ email, password });
   } else {
-    response = await client.auth.signIn({ email, password });
+    response = await client.auth.signInWithPassword({ email, password });
   }
   if (response.error) {
     throw response.error;
