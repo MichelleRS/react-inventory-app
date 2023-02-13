@@ -19,4 +19,7 @@ export async function authUser(email, password, type) {
   return response.user;
 }
 
-// TODO sign out user
+// sign out user
+export async function signOut() {
+  await client.auth.signOut();
+}
