@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext.js';
+import AddInventory from './AddInventory/AddInventory.js';
 
 export default function Inventory() {
   // redirect to auth if not a user
@@ -11,8 +12,7 @@ export default function Inventory() {
 
   return (
     <main>
-      <h2>Add Inventory</h2>
-      {/* TODO: add path to AddInventory/ */}
+      <AddInventory />
       <h2>Edit Inventory</h2>
       {/* TODO: add path to EditInventory/ */}
     </main>
