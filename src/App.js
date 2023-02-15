@@ -16,7 +16,7 @@ function App() {
       {/* Switch with Routes to Auth/ or Inventory/ */}
       <Switch>
         {/* route to Auth */}
-        <Route path="/auth/:type" component={Auth} />
+        <Route path="/auth/" component={Auth} />
         {/* route to Inventory/ */}
         <Route path="/inventory" component={Inventory} />
         <Route exact path="/">
@@ -24,7 +24,7 @@ function App() {
             {/* if user redirect to Inventory */}
             {user && <Redirect to="/inventory" />}
             {/* if not a user, redirect to sign-in */}
-            {!user && <Redirect to="/auth/sign-in" />}
+            {!user && <Redirect to="/auth/" />}
           </>
         </Route>
       </Switch>
