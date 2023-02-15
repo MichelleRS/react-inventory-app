@@ -5,18 +5,15 @@ export function getUser() {
   return client.auth.currentUser;
 }
 
-// get email, password, and type
-export async function authUser(email, password, type) {
-  let response;
-  // TODO: sign up not working, type is not being passed.
-  if (type === 'sign-up') {
-    response = await client.auth.signUp({ email, password });
-  } else {
-    response = await client.auth.signIn({ email, password });
-  }
-  if (response.error) {
-    throw response.error;
-  }
+// sign up user
+export async function signUpUser(email, password) {
+  const response = await client.auth.signUp({ email, password });
+  return response.user;
+}
+
+// sign in user
+export async function signInUser(email, password) {
+  const response = await client.auth.signIn({ email, password });
   return response.user;
 }
 
