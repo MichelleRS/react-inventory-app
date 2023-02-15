@@ -8,6 +8,7 @@ export function getUser() {
 // get email, password, and type
 export async function authUser(email, password, type) {
   let response;
+  // TODO: sign up not working, type is not being passed.
   if (type === 'sign-up') {
     response = await client.auth.signUp({ email, password });
   } else {
