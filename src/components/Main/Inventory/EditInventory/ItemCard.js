@@ -10,7 +10,13 @@ export default function ItemCard() {
       <>
         {inventory.map((item) => (
           <ul key={item.id}>
-            <li>{item.name}</li>
+            <li>
+              <h2>{item.name}</h2>
+              {/* TODO: button to change stock value */}
+              <button type="button">{String(item.stocked)}</button>
+              {/* TODO: button to delete item*/}
+              <button type="button">Delete Item</button>
+            </li>
           </ul>
         ))}
       </>
