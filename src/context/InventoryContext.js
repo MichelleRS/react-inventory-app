@@ -1,12 +1,10 @@
 import { createContext, useEffect, useState } from 'react';
 import { getUserInventory } from '../services/inventory.js';
-import { useUser } from './UserContext.js';
 
 const InventoryContext = createContext();
 
 const InventoryProvider = ({ children }) => {
   const [inventory, setInventory] = useState([]);
-  const { user } = useUser();
 
   // get inventory list
   useEffect(() => {
@@ -19,7 +17,7 @@ const InventoryProvider = ({ children }) => {
       }
     };
     fetchInventory();
-  }, [user]);
+  }, [inventory]);
 
   return (
     <InventoryContext.Provider value={{ inventory, setInventory }}>
