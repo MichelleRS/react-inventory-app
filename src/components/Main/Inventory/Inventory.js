@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext.js';
-import { getLowStockInventory } from '../../../services/inventory.js';
 import AddInventory from './AddInventory/AddInventory.js';
 import EditInventory from './EditInventory/EditInventory.js';
 
@@ -11,8 +10,6 @@ export default function Inventory() {
   if (!user) {
     return <Redirect to="/auth/sign-in" />;
   }
-
-  console.log('getLowStockInventory()', getLowStockInventory());
 
   return (
     <main>

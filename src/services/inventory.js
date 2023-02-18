@@ -22,4 +22,11 @@ export async function getLowStockInventory() {
   return checkError(response);
 }
 
-// TODO: get user items with stocked value of true from Supabase
+// get user items with stocked value of true from Supabase
+export async function getStockedInventory() {
+  const response = await client
+    .from('inventory')
+    .select('*')
+    .match({ user_id: getUser().id, stocked: true });
+  return checkError(response);
+}
