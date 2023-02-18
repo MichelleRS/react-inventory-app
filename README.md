@@ -17,19 +17,16 @@ CRUD app for tracking personal inventory. Developed as a solution for tracking m
 
 Users can:
 
-- add item to inventory and select stock status: stocked or low stock
-- view inventory sorted by stocked status
-- change stock status
+- add item to inventory and select stocked value: stocked or low stock
+- view inventory sorted by stocked value
+- change stocked value
 - remove item from inventory
 
 [Back to Table of Contents](#table-of-contents)
 
 ## Project Status
 
-- in progress:
-  - Auth functioning
-  - working on Inventory
-  - not styled
+In progress: EditInventory/
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -53,7 +50,7 @@ Components:
 
 ## Problems and Solutions
 
-### During Auth build
+### Auth build
 
 1. > Module not found: Error: Can't resolve '@supabase/supabase-js' in '...'
 
