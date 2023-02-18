@@ -7,12 +7,12 @@ export default function LowStock() {
 
   return (
     <>
-      <h2>Low Stock Inventory</h2>
+      <h3>Low Stock Inventory</h3>
       <section>
         <ul>
           {lowStockInventory.map((item) => (
             <li key={item.id}>
-              <h3>{item.name}</h3>
+              <h4>{item.name}</h4>
               {/* TODO: button to change stock value */}
               <button type="button" value={item.stocked} name="current-stock">
                 {String(item.stocked)}
