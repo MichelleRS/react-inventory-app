@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './context/UserContext.js';
 import { BrowserRouter } from 'react-router-dom';
 import { InventoryProvider } from './context/InventoryContext.js';
+import { LowStockProvider } from './context/LowStockContext.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <InventoryProvider>
-          <App />
+          <LowStockProvider>
+            <App />
+          </LowStockProvider>
         </InventoryProvider>
       </UserProvider>
     </BrowserRouter>
