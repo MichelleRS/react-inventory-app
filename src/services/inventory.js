@@ -12,3 +12,21 @@ export async function getUserInventory() {
   const response = await client.from('inventory').select('*').match({ user_id: getUser().id });
   return checkError(response);
 }
+
+// get user items with stocked value of false from Supabase
+export async function getLowStockInventory() {
+  const response = await client
+    .from('inventory')
+    .select('*')
+    .match({ user_id: getUser().id, stocked: false });
+  return checkError(response);
+}
+
+// get user items with stocked value of true from Supabase
+export async function getStockedInventory() {
+  const response = await client
+    .from('inventory')
+    .select('*')
+    .match({ user_id: getUser().id, stocked: true });
+  return checkError(response);
+}

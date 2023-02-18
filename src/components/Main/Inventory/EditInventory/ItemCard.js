@@ -9,23 +9,22 @@ export default function ItemCard() {
   // TODO: function to delete item from inventory
 
   return (
-    <div>
+    <>
       {/* TODO: remove div wrapper, move .map to EditInventory for each based on stock value */}
-      <>
+      {/* TODO remove ul from map and use in LowStock and Stocked */}
+      <ul>
         {inventory.map((item) => (
-          <ul key={item.id}>
-            <li>
-              <h2>{item.name}</h2>
-              {/* TODO: button to change stock value */}
-              <button type="button" value={item.stocked} name="current-stock">
-                {String(item.stocked)}
-              </button>
-              {/* TODO: button to delete item*/}
-              <button type="button">Delete Item</button>
-            </li>
-          </ul>
+          <li key={item.id}>
+            <h3>{item.name}</h3>
+            {/* TODO: button to change stock value */}
+            <button type="button" value={item.stocked} name="current-stock">
+              {String(item.stocked)}
+            </button>
+            {/* TODO: button to delete item*/}
+            <button type="button">Delete Item</button>
+          </li>
         ))}
-      </>
-    </div>
+      </ul>
+    </>
   );
 }
