@@ -30,3 +30,9 @@ export async function getStockedInventory() {
     .match({ user_id: getUser().id, stocked: true });
   return checkError(response);
 }
+
+// delete item row from Supabase based on id
+export async function deleteItemRow(id) {
+  const response = await client.from('inventory').delete().match({ id }).single;
+  return checkError(response);
+}
