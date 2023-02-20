@@ -45,7 +45,7 @@ export default function AddInventory() {
           {/* stocked */}
           <input
             type="radio"
-            name="current-stock"
+            name="currentStock"
             id="stocked"
             value={true}
             onChange={(e) => setStocked(e.target.value)}
@@ -54,12 +54,12 @@ export default function AddInventory() {
           {/* low stock */}
           <input
             type="radio"
-            name="current-stock"
-            id="low-stock"
+            name="currentStock"
+            id="lowStock"
             value={false}
             onChange={(e) => setStocked(e.target.value)}
           />
-          <label htmlFor="low stock">Low stock</label>
+          <label htmlFor="lowStock">Low stock</label>
         </fieldset>
 
         {/* button: add item */}
