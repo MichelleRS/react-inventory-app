@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { getLowStockInventory } from '../services/inventory.js';
 
 const LowStockContext = createContext();
@@ -26,4 +26,12 @@ const LowStockProvider = ({ children }) => {
   );
 };
 
-export { LowStockContext, LowStockProvider };
+const useLowStock = () => {
+  const data = useContext(LowStockContext);
+  if (!data) {
+    throw new Error('useLowStock error');
+  }
+  return data;
+};
+
+export { useLowStock, LowStockProvider };

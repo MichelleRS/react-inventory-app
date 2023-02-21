@@ -33,6 +33,6 @@ export async function getStockedInventory() {
 
 // delete item row from Supabase based on id
 export async function deleteItemRow(id) {
-  const response = await client.from('inventory').delete().match({ id }).single;
+  const response = await client.from('inventory').delete().match({ id }).single();
   return checkError(response);
 }
