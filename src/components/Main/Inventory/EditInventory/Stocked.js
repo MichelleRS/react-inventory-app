@@ -1,9 +1,22 @@
-import React, { useContext } from 'react';
-import { StockedContext } from '../../../../context/StockedContext.js';
+import React from 'react';
+import { useStocked } from '../../../../context/StockedContext.js';
+import { deleteItemRow } from '../../../../services/inventory.js';
 
 export default function Stocked() {
   // get inventory
-  const { StockedInventory } = useContext(StockedContext);
+  const { StockedInventory, setStockedInventory } = useStocked();
+
+  // delete item and update state of stocked inventory
+  const handleDeleteItem = async (item) => {
+    try {
+      const deletedItem = await deleteItemRow(item);
+      setStockedInventory((prevItems) =>
+        prevItems.filter((prevItem) => prevItem.id !== deletedItem.id)
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   return (
     <>
@@ -18,7 +31,9 @@ export default function Stocked() {
                 {String(item.stocked)}
               </button>
               {/* TODO: button to delete item*/}
-              <button type="button">Delete Item</button>
+              <button type="button" onClick={() => handleDeleteItem(item.id)}>
+                Delete Item
+              </button>
             </li>
           ))}
         </ul>
