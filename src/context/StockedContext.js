@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { getStockedInventory } from '../services/inventory.js';
 
 const StockedContext = createContext();
@@ -26,4 +26,12 @@ const StockedProvider = ({ children }) => {
   );
 };
 
-export { StockedContext, StockedProvider };
+const useStocked = () => {
+  const data = useContext(StockedContext);
+  if (!data) {
+    throw new Error('useStocked error');
+  }
+  return data;
+};
+
+export { useStocked, StockedProvider };
