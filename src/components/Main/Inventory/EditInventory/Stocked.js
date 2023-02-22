@@ -1,10 +1,22 @@
 import React from 'react';
 import { useStocked } from '../../../../context/StockedContext.js';
-import { deleteItemRow } from '../../../../services/inventory.js';
+import { deleteItemRow, upsertLowStock } from '../../../../services/inventory.js';
 
 export default function Stocked() {
   // get inventory
   const { StockedInventory, setStockedInventory } = useStocked();
+
+  // change current stock value to false and update state of stocked inventory
+  const handleStockedToggle = async (item) => {
+    try {
+      const toggledItem = await upsertLowStock(item);
+      setStockedInventory((prevItems) =>
+        prevItems.map((prevItem) => (prevItem.stocked === false ? toggledItem : prevItem))
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   // delete item and update state of stocked inventory
   const handleDeleteItem = async (item) => {
@@ -27,7 +39,12 @@ export default function Stocked() {
             <li key={item.id}>
               <h4>{item.name}</h4>
               {/* TODO: button to change stock value */}
-              <button type="button" value={item.stocked} name="current-stock">
+              <button
+                type="button"
+                value={item.stocked}
+                name="current-stock"
+                onClick={() => handleStockedToggle(item)}
+              >
                 {String(item.stocked)}
               </button>
               {/* TODO: button to delete item*/}
