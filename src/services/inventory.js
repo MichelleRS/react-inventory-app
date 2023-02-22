@@ -31,6 +31,18 @@ export async function getStockedInventory() {
   return checkError(response);
 }
 
+// change stocked value to true in Supabase
+export async function upsertStocked(item) {
+  const response = await client
+    .from('inventory')
+    .update({ stocked: true })
+    .match({ id: item.id })
+    .single();
+  return checkError(response);
+}
+
+// TODO: change stocked value to false in Supabase
+
 // delete item row from Supabase based on id
 export async function deleteItemRow(id) {
   const response = await client.from('inventory').delete().match({ id }).single();
