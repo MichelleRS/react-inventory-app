@@ -18,7 +18,8 @@ export async function getLowStockInventory() {
   const response = await client
     .from('inventory')
     .select('*')
-    .match({ user_id: getUser().id, stocked: false });
+    .match({ user_id: getUser().id, stocked: false })
+    .order('name');
   return checkError(response);
 }
 
@@ -27,7 +28,8 @@ export async function getStockedInventory() {
   const response = await client
     .from('inventory')
     .select('*')
-    .match({ user_id: getUser().id, stocked: true });
+    .match({ user_id: getUser().id, stocked: true })
+    .order('name');
   return checkError(response);
 }
 
