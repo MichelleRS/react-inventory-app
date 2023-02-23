@@ -8,8 +8,11 @@ export default function Header() {
   // sign out button
   const handleSignOut = async () => {
     try {
+      // sign out user
       await signOut();
       setUser(null);
+      // FIX: refresh page, TODO: refactor to update the state
+      window.location.reload(false);
     } catch (e) {
       console.error(e.message);
     }

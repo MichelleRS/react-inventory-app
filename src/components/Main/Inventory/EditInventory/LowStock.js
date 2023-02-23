@@ -38,16 +38,16 @@ export default function LowStock() {
           {lowStockInventory.map((item) => (
             <li key={item.id}>
               <h4>{item.name}</h4>
-              {/* TODO: button to change stock value */}
+              {/* button to change stock value */}
               <button
                 type="button"
                 value={item.stocked}
                 name="current-stock"
                 onClick={() => handleStockedToggle(item)}
               >
-                {String(item.stocked)}
+                Move to Stocked
               </button>
-              {/* TODO: button to delete item*/}
+              {/* button to delete item */}
               <button type="button" onClick={() => handleDeleteItem(item.id)}>
                 Delete Item
               </button>

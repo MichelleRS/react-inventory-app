@@ -18,8 +18,11 @@ export default function SignIn() {
   const submitSignIn = async (e) => {
     e.preventDefault();
     try {
+      // sign in user
       const newUser = await signInUser(email, password);
       setUser(newUser);
+      // FIX: refresh page TODO: refactor to update the state
+      window.location.reload(false);
     } catch (e) {
       console.error(e);
     }
