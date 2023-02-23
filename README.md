@@ -26,7 +26,10 @@ Users can:
 
 ## Project Status
 
-In progress: EditInventory/
+In progress:
+
+- MVP app functionality complete
+- beginning CSS
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -63,6 +66,12 @@ Components:
 3. Unable to sign in
 
 - Solution: Sign in method deprecated in Supabase Version 2. Install version 1: npm i @supabase/supabase-js@1.28.5
+
+4. When previewing my app in Netlify, an error pops up after an action is performed. Error reads:
+   > Page Not Found. Looks like you’ve followed a broken link or entered a URL that doesn’t exist on this site.
+
+- Solution: In `public/`, create a `_redirects` file with this line of code: `/*    /index.html    200`
+- Source: Top answer from Adwaith on [_Stack Overflow_](https://stackoverflow.com/questions/50752350/page-not-found-when-trying-to-access-a-site-deployed-on-netlify)
 
 [Back to Table of Contents](#table-of-contents)
 
