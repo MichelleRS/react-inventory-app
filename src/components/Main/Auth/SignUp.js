@@ -18,8 +18,11 @@ export default function SignUp() {
   const submitSignUp = async (e) => {
     e.preventDefault();
     try {
+      // sign up user
       const newUser = await signUpUser(email, password);
       setUser(newUser);
+      // FIX: refresh page, TODO: refactor to update the state
+      window.location.reload(false);
     } catch (e) {
       console.error(e);
     }
