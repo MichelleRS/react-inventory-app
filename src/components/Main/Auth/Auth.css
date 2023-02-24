@@ -10,6 +10,7 @@
 .authFlexboxItem {
   background-color: pink;
   margin: 20px;
+  padding: 20px;
 }
 
 .authSignIn {
@@ -17,5 +18,9 @@
 }
 
 .authSignUp {
-  border: 4px solid blue;
+  border: 5px solid blue;
+}
+
+h3 {
+  margin: 0px;
 }

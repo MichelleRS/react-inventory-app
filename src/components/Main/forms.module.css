@@ -1,0 +1,12 @@
+form {
+  border: 1px solid black;
+}
+
+.control,
+fieldset {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+}
