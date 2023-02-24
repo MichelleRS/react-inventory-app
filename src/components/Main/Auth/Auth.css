@@ -1,5 +1,5 @@
+/* containers */
 .authFlexboxContainer {
-  border: 5px dotted magenta;
   display: flex;
   /* horizontal */
   justify-content: center;
@@ -8,19 +8,32 @@
 }
 
 .authFlexboxItem {
-  background-color: pink;
   margin: 20px;
   padding: 20px;
 }
 
 .authSignIn {
-  border: 5px solid green;
+  border: 1px solid var(--color6);
 }
 
 .authSignUp {
-  border: 5px solid blue;
+  border: 1px solid var(--color6);
 }
 
+/* text */
 h3 {
   margin: 0px;
+}
+
+/* form */
+form {
+}
+
+.control,
+fieldset {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
 }

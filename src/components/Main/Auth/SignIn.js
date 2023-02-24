@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext.js';
 import { signInUser } from '../../../services/auth.js';
 import './Auth.css';
-import styles from '../../Main/forms.module.css';
 
 export default function SignIn() {
   // initialize state
@@ -35,7 +34,7 @@ export default function SignIn() {
       <h3>Sign In</h3>
       <form onSubmit={submitSignIn}>
         {/* email */}
-        <div className={styles.control}>
+        <div className="control">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -45,7 +44,7 @@ export default function SignIn() {
           ></input>
         </div>
         {/* password */}
-        <div className={styles.control}>
+        <div className="control">
           <label htmlFor="password">Password</label>
           <input
             type="password"
