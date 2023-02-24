@@ -1,7 +1,10 @@
 .authFlexboxContainer {
   border: 5px dotted magenta;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
+  align-items: center;
 }
 
 .authFlexboxItem {
