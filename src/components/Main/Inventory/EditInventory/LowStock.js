@@ -53,7 +53,7 @@ export default function LowStock() {
               {/* button to delete item */}
               <button
                 type="button"
-                className={styles.secondaryButton}
+                className={styles.tertiaryButton}
                 onClick={() => handleDeleteItem(item.id)}
               >
                 Delete Item

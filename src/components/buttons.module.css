@@ -1,3 +1,6 @@
+button {
+  margin: 0px 30px 0px 0px;
+}
 button:hover {
   cursor: pointer;
 }
@@ -18,13 +21,25 @@ button:hover {
 .primaryButton:hover {
   color: var(--color3);
 }
-/* TODO secondary button */
-.secondaryButton {
-  /* remove border and background */
-  border: none;
-  background-color: transparent;
 
-  text-decoration: underline;
+/* secondary button */
+.secondaryButton {
+  /* size and spacing */
+  /* width: 125px; */
+  /* height: 40px; */
+  /* color */
+  background-color: var(--color4);
+  color: var(--color1);
+  /* text */
+  /* font-size: 1.25rem; */
+  font-weight: bolder;
+  /* style */
+  border: 1px solid var(--color1);
 }
 
-/* TODO tertiary button */ ;
+/* TODO tertiary button */
+.tertiaryButton {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useUser } from '../../context/UserContext.js';
 import { signOut } from '../../services/auth.js';
+import './Header.css';
+import styles from '../buttons.module.css';
 
 export default function Header() {
   const { user, setUser } = useUser();
@@ -19,18 +21,17 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <header>
       <h1>Inventory App</h1>
       {user && (
         <nav>
           <p>
-            <button type="button" onClick={handleSignOut}>
+            <button type="button" className={styles.tertiaryButton} onClick={handleSignOut}>
               Sign out
-            </button>{' '}
-            from {user.email}
+            </button>
           </p>
         </nav>
       )}
-    </div>
+    </header>
   );
 }
