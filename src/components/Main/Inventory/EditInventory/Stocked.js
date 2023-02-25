@@ -2,6 +2,7 @@ import React from 'react';
 import { useStocked } from '../../../../context/StockedContext.js';
 import { deleteItemRow, upsertLowStock } from '../../../../services/inventory.js';
 import '../Inventory.css';
+import styles from '../../../buttons.module.css';
 
 export default function Stocked() {
   // get inventory
@@ -42,6 +43,7 @@ export default function Stocked() {
               {/* button to change stock value */}
               <button
                 type="button"
+                className={styles.secondaryButton}
                 value={item.stocked}
                 name="current-stock"
                 onClick={() => handleStockedToggle(item)}
@@ -49,7 +51,11 @@ export default function Stocked() {
                 Move to Low Stock
               </button>
               {/* button to delete item */}
-              <button type="button" onClick={() => handleDeleteItem(item.id)}>
+              <button
+                type="button"
+                className={styles.secondaryButton}
+                onClick={() => handleDeleteItem(item.id)}
+              >
                 Delete Item
               </button>
             </li>

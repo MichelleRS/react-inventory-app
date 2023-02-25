@@ -1,3 +1,6 @@
+button:hover {
+  cursor: pointer;
+}
 .primaryButton {
   /* size and spacing */
   width: 150px;
@@ -16,5 +19,12 @@
   color: var(--color3);
 }
 /* TODO secondary button */
+.secondaryButton {
+  /* remove border and background */
+  border: none;
+  background-color: transparent;
 
-/* TODO tertiary button */
+  text-decoration: underline;
+}
+
+/* TODO tertiary button */ ;

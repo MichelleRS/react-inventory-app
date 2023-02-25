@@ -48,3 +48,9 @@ h3 {
 h4 {
   margin: 20px 0px 10px;
 }
+
+ol,
+ul,
+li {
+  list-style: none;
+}
