@@ -1,0 +1,16 @@
+/* containers */
+.inventoryFlexboxContainer {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  /* horizontal */
+  justify-content: center;
+  /* vertical */
+  align-items: start;
+}
+
+.inventoryFlexboxItem {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+}

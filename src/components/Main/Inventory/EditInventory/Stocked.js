@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStocked } from '../../../../context/StockedContext.js';
 import { deleteItemRow, upsertLowStock } from '../../../../services/inventory.js';
+import '../Inventory.css';
 
 export default function Stocked() {
   // get inventory

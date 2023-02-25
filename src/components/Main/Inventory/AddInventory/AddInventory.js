@@ -23,7 +23,7 @@ export default function AddInventory() {
   };
 
   return (
-    <div>
+    <section className="inventoryFlexboxItem">
       <h2>Add Item to Inventory</h2>
       {/* form */}
       <form>
@@ -69,6 +69,6 @@ export default function AddInventory() {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLowStock } from '../../../../context/LowStockContext.js';
 import { deleteItemRow, upsertStocked } from '../../../../services/inventory.js';
+import '../Inventory.css';
 
 export default function LowStock() {
   // get inventory
