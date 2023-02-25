@@ -9,26 +9,24 @@
 
 .authFlexboxItem {
   margin: 20px;
-  padding: 20px;
+  padding: 20px 50px 20px;
 }
 
 .authSignIn {
-  border: 1px solid var(--color6);
+  /* border: 1px solid var(--color6); */
 }
 
 .authSignUp {
-  border: 1px solid var(--color6);
+  /* border: 1px solid var(--color6); */
 }
 
 /* text */
 h3 {
   margin: 0px;
+  font-size: 1.5rem;
 }
 
 /* form */
-form {
-}
-
 .control,
 fieldset {
   margin: 20px 0;
@@ -36,4 +34,26 @@ fieldset {
 
 label {
   display: block;
+  font-size: 1.25rem;
 }
+
+input {
+  font-size: 1.25rem;
+  color: var(--color6);
+  background-color: var(--color4);
+  border: 1px solid var(--color6);
+  border-radius: 5px;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 0px 0px 0px;
+  /* TODO icon */
+}
+
+input:focus,
+input:hover {
+  background-color: var(--color4);
+  border: 1px solid var(--color1);
+}
+
+/* TODO input#email{} */
+
+/* TODO input#password{} */
