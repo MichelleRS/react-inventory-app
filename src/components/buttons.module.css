@@ -1,0 +1,20 @@
+.primaryButton {
+  /* size and spacing */
+  width: 150px;
+  height: 40px;
+  /* color */
+  background-color: var(--color1);
+  color: var(--color4);
+  /* text */
+  font-size: 1.25rem;
+  font-weight: bolder;
+  /* style */
+  border: none;
+}
+
+.primaryButton:hover {
+  color: var(--color3);
+}
+/* TODO secondary button */
+
+/* TODO tertiary button */

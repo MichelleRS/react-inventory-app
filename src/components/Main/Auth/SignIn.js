@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext.js';
 import { signInUser } from '../../../services/auth.js';
 import './Auth.css';
+import styles from '../../buttons.module.css';
 
 export default function SignIn() {
   // initialize state
@@ -54,7 +55,9 @@ export default function SignIn() {
           ></input>
         </div>
         {/* button */}
-        <button type="submit">Submit</button>
+        <button type="submit" className={styles.primaryButton}>
+          Submit
+        </button>
       </form>
     </section>
   );
