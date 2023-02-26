@@ -1,5 +1,6 @@
 /* containers */
 .authFlexboxContainer {
+  background-color: var(--color4);
   display: flex;
   /* horizontal */
   justify-content: center;

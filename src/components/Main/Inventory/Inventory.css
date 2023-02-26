@@ -1,11 +1,12 @@
 /* containers */
 .inventoryFlexboxContainer {
+  background-color: var(--color4);
   /* border: 1px solid black; */
   display: flex;
   /* horizontal */
   justify-content: center;
   /* vertical */
-  align-items: start;
+  align-items: flex-start;
 }
 
 .inventoryFlexboxItem {
