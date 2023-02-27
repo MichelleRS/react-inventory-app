@@ -4,3 +4,7 @@ header {
   /* background-color: var(--color4); */
   padding: 20px;
 }
+
+h1 {
+  font-weight: 900;
+}
