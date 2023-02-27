@@ -5,8 +5,8 @@ import '../Inventory.css';
 
 export default function EditInventory() {
   return (
-    <section className="inventoryFlexboxItem">
-      <h2>View and Edit Inventory</h2>
+    <section className="inventoryFlexboxItem editInventoryContainer">
+      <h2>Edit Inventory</h2>
       <LowStock />
       <Stocked />
     </section>

@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color6);
-  background-color: var(--color4);
+  background-color: var(--color7);
 }
 
 code {
@@ -13,6 +15,7 @@ code {
 }
 
 /* color palette */
+/* TODO: remove unused colors */
 :root {
   /* color 1 */
   --color1: hsla(131, 69%, 43%, 1);
@@ -26,6 +29,12 @@ code {
   --color5: hsla(196, 28%, 27%, 1);
   /* dark neutral */
   --color6: hsla(185, 22%, 10%, 1);
+  /* light neutral */
+  --color7: hsla(42, 70%, 94%, 1);
+  /* dark neutral */
+  --color8: hsla(230, 41%, 30%, 1);
+  /* dark neutral */
+  --color9: hsla(222, 29%, 22%, 1);
 }
 
 /* text */

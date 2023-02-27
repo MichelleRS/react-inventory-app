@@ -25,8 +25,8 @@ export default function AddInventory() {
   };
 
   return (
-    <section className="inventoryFlexboxItem">
-      <h2>Add Item to Inventory</h2>
+    <section className="addInventoryContainer">
+      <h2>Add to Inventory</h2>
       {/* form */}
       <form>
         {/* input: name */}
