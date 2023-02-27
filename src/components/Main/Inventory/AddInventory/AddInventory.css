@@ -4,8 +4,9 @@
   border-radius: 40px;
   /* box-shadow: offset-x offset-y blur-radius shadow-radius color */
   box-shadow: -5px 5px 0px 0px var(--color6);
-  margin: 10px;
+  margin: 10px auto;
   padding: 30px;
+  width: 550px;
 }
 
 .control {
@@ -18,7 +19,7 @@ form {
 
 fieldset {
   border: 0px;
-  display: block;
+  /* display: block; */
 }
 
 legend {
