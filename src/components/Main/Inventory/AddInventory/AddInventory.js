@@ -26,52 +26,58 @@ export default function AddInventory() {
 
   return (
     <section className="addInventoryContainer">
-      <h2>Add to Inventory</h2>
-      {/* form */}
-      <form>
-        {/* input: name */}
-        <div>
-          <label htmlFor="name">Name of item</label>
-          <input
-            type="text"
-            name="name"
-            className="itemInput"
-            value={itemName}
-            onChange={(e) => setItemName(e.target.value)}
-          />
-        </div>
+      {/* add inventory form */}
+      <div className="addInventoryForm">
+        <h2>Add to Inventory</h2>
+        {/* form */}
+        <form>
+          {/* input: name */}
+          <div>
+            <label htmlFor="name">Name of item</label>
+            <input
+              type="text"
+              name="name"
+              className="itemInput"
+              value={itemName}
+              onChange={(e) => setItemName(e.target.value)}
+            />
+          </div>
+          {/* radio buttons: stocked, low stock */}
+          {/* send stocked value to Supabase */}
+          <fieldset>
+            <legend>Current stock</legend>
+            {/* stocked */}
+            <input
+              type="radio"
+              name="currentStock"
+              id="stocked"
+              value={true}
+              onChange={(e) => setStocked(e.target.value)}
+            />
+            <label htmlFor="stocked">Stocked</label>
+            {/* low stock */}
+            <input
+              type="radio"
+              name="currentStock"
+              id="lowStock"
+              value={false}
+              onChange={(e) => setStocked(e.target.value)}
+            />
+            <label htmlFor="lowStock">Low stock</label>
+          </fieldset>
+          {/* button: add item */}
+          <div>
+            <button type="submit" className={styles.primaryButton} onClick={handleNewItem}>
+              Add Item
+            </button>
+          </div>
+        </form>
+      </div>
 
-        {/* radio buttons: stocked, low stock */}
-        {/* send stocked value to Supabase */}
-        <fieldset>
-          <legend>Current stock</legend>
-          {/* stocked */}
-          <input
-            type="radio"
-            name="currentStock"
-            id="stocked"
-            value={true}
-            onChange={(e) => setStocked(e.target.value)}
-          />
-          <label htmlFor="stocked">Stocked</label>
-          {/* low stock */}
-          <input
-            type="radio"
-            name="currentStock"
-            id="lowStock"
-            value={false}
-            onChange={(e) => setStocked(e.target.value)}
-          />
-          <label htmlFor="lowStock">Low stock</label>
-        </fieldset>
-
-        {/* button: add item */}
-        <div>
-          <button type="submit" className={styles.primaryButton} onClick={handleNewItem}>
-            Add Item
-          </button>
-        </div>
-      </form>
+      {/* add inventory image */}
+      <div className="addInventoryImage">
+        <img src="https://placekitten.com/g/220/200" alt="" />
+      </div>
     </section>
   );
 }

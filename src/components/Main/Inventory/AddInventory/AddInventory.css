@@ -7,6 +7,20 @@
   margin: 10px auto;
   padding: 30px;
   width: 650px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.addInventoryForm {
+  background-color: pink;
+  width: 55%;
+}
+
+.addInventoryImage {
+  width: 35%;
+  border: 3px solid black;
+  padding: 10px;
 }
 
 .control {
