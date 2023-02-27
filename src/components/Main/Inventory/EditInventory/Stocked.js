@@ -33,7 +33,7 @@ export default function Stocked() {
   };
 
   return (
-    <>
+    <div className="stockedContainer">
       <h3>Stocked Inventory</h3>
       <section>
         <ul>
@@ -62,6 +62,6 @@ export default function Stocked() {
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

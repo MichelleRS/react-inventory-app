@@ -1,7 +1,7 @@
 /* containers */
 .inventoryFlexboxContainer {
   /* background-color: var(--color4); */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   /* horizontal */
@@ -13,8 +13,18 @@
 }
 
 .inventoryFlexboxItem {
-  border: 1px solid blue;
-  margin: 10px auto;
+  /* border: 5px solid yellowgreen; */
+  margin: 20px auto;
   padding: 10px;
-  width: 725px;
+  width: 650px;
+}
+
+.editInventoryContainer {
+  /* background-color: pink; */
+}
+
+.inventoryListsContainer {
+  /* border: 5px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
 }

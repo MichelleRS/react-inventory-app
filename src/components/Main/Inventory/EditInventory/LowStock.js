@@ -33,7 +33,7 @@ export default function LowStock() {
   };
 
   return (
-    <>
+    <div className="lowStockContainer">
       <h3>Low Stock Inventory</h3>
       <section>
         <ul>
@@ -62,6 +62,6 @@ export default function LowStock() {
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

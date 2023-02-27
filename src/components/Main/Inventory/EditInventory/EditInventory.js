@@ -7,8 +7,10 @@ export default function EditInventory() {
   return (
     <section className="inventoryFlexboxItem editInventoryContainer">
       <h2>Edit Inventory</h2>
-      <LowStock />
-      <Stocked />
+      <div className="inventoryListsContainer">
+        <LowStock />
+        <Stocked />
+      </div>
     </section>
   );
 }
