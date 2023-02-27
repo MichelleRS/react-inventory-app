@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { InventoryContext } from '../../../../context/InventoryContext.js';
 import { createItemRow } from '../../../../services/inventory.js';
+import './AddInventory.css';
+import styles from '../../../buttons.module.css';
 
 export default function AddInventory() {
   // initialize state for name and stocked
@@ -23,8 +25,8 @@ export default function AddInventory() {
   };
 
   return (
-    <div>
-      <h2>Add Item to Inventory</h2>
+    <section className="addInventoryContainer">
+      <h2>Add to Inventory</h2>
       {/* form */}
       <form>
         {/* input: name */}
@@ -33,13 +35,14 @@ export default function AddInventory() {
           <input
             type="text"
             name="name"
+            className="itemInput"
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
           />
         </div>
 
         {/* radio buttons: stocked, low stock */}
-        {/* TODO send stocked value to Supabase */}
+        {/* send stocked value to Supabase */}
         <fieldset>
           <legend>Current stock</legend>
           {/* stocked */}
@@ -64,11 +67,11 @@ export default function AddInventory() {
 
         {/* button: add item */}
         <div>
-          <button type="submit" onClick={handleNewItem}>
+          <button type="submit" className={styles.primaryButton} onClick={handleNewItem}>
             Add Item
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

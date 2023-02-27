@@ -1,0 +1,48 @@
+button {
+  margin: 0px 30px 0px 0px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.primaryButton {
+  /* size and spacing */
+  width: 150px;
+  height: 40px;
+  /* color */
+  background-color: var(--color6);
+  color: var(--color7);
+  /* text */
+  font-size: 1.25rem;
+  font-weight: bolder;
+  /* style */
+  border: none;
+}
+
+/* TODO primary button hover, focus, active */
+
+/* secondary button */
+.secondaryButton {
+  /* size and spacing */
+  /* width: 125px; */
+  /* height: 40px; */
+  /* color */
+  background-color: var(--color7);
+  color: var(--color6);
+  /* text */
+  /* font-size: 1.25rem; */
+  font-weight: bolder;
+  /* style */
+  border: 1px solid var(--color6);
+}
+
+/* TODO secondary button hover, focus, active */
+
+/* TODO tertiary button */
+.tertiaryButton {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* TODO tertiary button hover, focus, active */

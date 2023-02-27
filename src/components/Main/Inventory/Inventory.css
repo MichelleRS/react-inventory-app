@@ -1,0 +1,30 @@
+/* containers */
+.inventoryFlexboxContainer {
+  /* background-color: var(--color4); */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* horizontal */
+  justify-content: center;
+  /* vertical */
+  align-items: flex-start;
+  /* gap: 30px; */
+  width: 100%;
+}
+
+.inventoryFlexboxItem {
+  /* border: 5px solid yellowgreen; */
+  margin: 20px auto;
+  padding: 10px;
+  width: 650px;
+}
+
+.editInventoryContainer {
+  /* background-color: pink; */
+}
+
+.inventoryListsContainer {
+  /* border: 5px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+}

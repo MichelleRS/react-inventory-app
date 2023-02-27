@@ -1,13 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--color6);
+  background-color: var(--color7);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* color palette */
+/* TODO: remove unused colors */
+:root {
+  /* color 1 */
+  --color1: hsla(131, 69%, 43%, 1);
+  /* color 2 */
+  --color2: hsla(7, 64%, 54%, 1);
+  /* color 3 */
+  --color3: hsla(58, 100%, 44%, 1);
+  /* light neutral */
+  --color4: hsla(88, 28%, 87%, 1);
+  /* medium neutral */
+  --color5: hsla(196, 28%, 27%, 1);
+  /* dark neutral */
+  --color6: hsla(185, 22%, 10%, 1);
+  /* light neutral */
+  --color7: hsla(42, 70%, 94%, 1);
+  /* dark neutral */
+  --color8: hsla(230, 41%, 30%, 1);
+  /* dark neutral */
+  --color9: hsla(222, 29%, 22%, 1);
+}
+
+/* text */
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  color: var(--color6);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0px 0px 10px;
+}
+
+h4 {
+  margin: 20px 0px 10px;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
 }

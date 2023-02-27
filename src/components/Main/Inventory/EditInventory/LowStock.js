@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLowStock } from '../../../../context/LowStockContext.js';
 import { deleteItemRow, upsertStocked } from '../../../../services/inventory.js';
+import '../Inventory.css';
+import styles from '../../../buttons.module.css';
 
 export default function LowStock() {
   // get inventory
@@ -31,7 +33,7 @@ export default function LowStock() {
   };
 
   return (
-    <>
+    <div className="lowStockContainer">
       <h3>Low Stock Inventory</h3>
       <section>
         <ul>
@@ -41,6 +43,7 @@ export default function LowStock() {
               {/* button to change stock value */}
               <button
                 type="button"
+                className={styles.secondaryButton}
                 value={item.stocked}
                 name="current-stock"
                 onClick={() => handleStockedToggle(item)}
@@ -48,13 +51,17 @@ export default function LowStock() {
                 Move to Stocked
               </button>
               {/* button to delete item */}
-              <button type="button" onClick={() => handleDeleteItem(item.id)}>
+              <button
+                type="button"
+                className={styles.tertiaryButton}
+                onClick={() => handleDeleteItem(item.id)}
+              >
                 Delete Item
               </button>
             </li>
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

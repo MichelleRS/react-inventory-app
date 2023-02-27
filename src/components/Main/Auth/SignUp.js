@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext.js';
 import { signUpUser } from '../../../services/auth.js';
+import './Auth.css';
+import styles from '../../buttons.module.css';
 
 export default function SignUp() {
   // initialize state
@@ -29,28 +31,34 @@ export default function SignUp() {
   };
 
   return (
-    <>
-      <section>
-        <h3>Sign Up</h3>
-        <form onSubmit={submitSignUp}>
-          {/* email fieldset */}
-          <fieldset>
-            <label>Email</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-          </fieldset>
-          {/* password fieldset */}
-          <fieldset>
-            <label>Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-          </fieldset>
-          {/* button */}
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </>
+    <section className="authFlexboxItem authSignUp">
+      <h3>Sign Up</h3>
+      <form onSubmit={submitSignUp}>
+        {/* email */}
+        <div className="control">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+        </div>
+        {/* password */}
+        <div className="control">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+        </div>
+        {/* button */}
+        <button type="submit" className={styles.primaryButton}>
+          Submit
+        </button>
+      </form>
+    </section>
   );
 }

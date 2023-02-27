@@ -1,0 +1,46 @@
+.addInventoryContainer {
+  /* background-color: var(--color9); */
+  border: 5px solid var(--color6);
+  border-radius: 40px;
+  /* box-shadow: offset-x offset-y blur-radius shadow-radius color */
+  box-shadow: -5px 5px 0px 0px var(--color6);
+  margin: 10px auto;
+  padding: 30px;
+  width: 650px;
+}
+
+.control {
+  margin: 60px 0;
+}
+
+form {
+  font-weight: 500;
+}
+
+fieldset {
+  border: 0px;
+  /* display: block; */
+}
+
+legend {
+  font-size: 1.25rem;
+  padding: 0px;
+}
+
+label {
+  margin: 0px 20px 0px 5px;
+}
+
+.itemInput {
+  display: block;
+  width: 250px;
+  font-size: 1.25rem;
+  border: 3px solid var(--color6);
+  background-color: var(--color7);
+  color: var(--color6);
+  border-radius: 5px;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 0px 0px 0px;
+}
+
+/* TODO input hover, focus, active */
