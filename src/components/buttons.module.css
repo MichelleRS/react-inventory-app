@@ -5,6 +5,10 @@ button:hover {
   cursor: pointer;
 }
 
+.addItemButton {
+  width: 450px;
+}
+
 .primaryButton {
   /* size and spacing */
   width: 150px;
