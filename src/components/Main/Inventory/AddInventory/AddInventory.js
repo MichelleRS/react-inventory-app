@@ -54,7 +54,9 @@ export default function AddInventory() {
                 value={true}
                 onChange={(e) => setStocked(e.target.value)}
               />
-              <label htmlFor="stocked">Stocked</label>
+              <label htmlFor="stocked" className="radio">
+                Stocked
+              </label>
               {/* low stock */}
               <input
                 type="radio"
@@ -63,7 +65,9 @@ export default function AddInventory() {
                 value={false}
                 onChange={(e) => setStocked(e.target.value)}
               />
-              <label htmlFor="lowStock">Low stock</label>
+              <label htmlFor="lowStock" className="radio">
+                Low stock
+              </label>
             </fieldset>
           </div>
         </div>

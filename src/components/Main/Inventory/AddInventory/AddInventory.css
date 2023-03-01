@@ -85,3 +85,14 @@ label {
 }
 
 /* TODO input hover, focus, active */
+
+/* radio button style */
+
+input[type='radio'] {
+  accent-color: var(--color6);
+  cursor: pointer;
+}
+
+label.radio {
+  cursor: pointer;
+}
