@@ -36,6 +36,8 @@ code {
   --color8: hsla(230, 41%, 30%, 1);
   /* dark neutral */
   --color9: hsla(222, 29%, 22%, 1);
+  /* accent color for hover and focus */
+  --accentColor: hsla(195, 100%, 60%, 1);
 }
 
 /* text */

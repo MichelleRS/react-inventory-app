@@ -1,3 +1,6 @@
+/* containers */
+/* TODO remove unnecessary bgc and borders when css is complete */
+
 .addInventoryContainer {
   /* background-color: var(--color9); */
   border: 5px solid var(--color6);
@@ -52,20 +55,10 @@
   /* margin-right: -5px; */
 }
 
+/* form elements */
+
 form {
   font-weight: 500;
-}
-
-fieldset {
-  /* border: 12px solid pink; */
-  border: 0px;
-  /* margin-top: 50px; */
-  /* display: block; */
-}
-
-legend {
-  font-size: 1.25rem;
-  padding: 0px;
 }
 
 label {
@@ -84,9 +77,24 @@ label {
   margin: 5px 0px 0px 0px;
 }
 
-/* TODO input hover, focus, active */
+.itemInput:hover,
+.itemInput:focus,
+.itemInput:active {
+  border: 3px dashed var(--color6);
+  background-color: var(--accentColor);
+}
 
-/* radio button style */
+fieldset {
+  /* border: 12px solid pink; */
+  border: 0px;
+  /* margin-top: 50px; */
+  /* display: block; */
+}
+
+legend {
+  font-size: 1.25rem;
+  padding: 0px;
+}
 
 input[type='radio'] {
   accent-color: var(--color6);
