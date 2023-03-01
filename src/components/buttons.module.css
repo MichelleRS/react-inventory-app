@@ -23,7 +23,7 @@ button:hover {
   border: none;
 }
 
-/* TODO primary button hover, focus, active */
+/* primary button hover, focus, active */
 .primaryButton:hover,
 .primaryButton:focus,
 .primaryButton:active {
@@ -60,10 +60,15 @@ button:hover {
   text-decoration: underline;
 }
 
-/* tertiary button hover, focus, active */
 .tertiaryButton:hover,
-.tertiaryButton:focus,
 .tertiaryButton:active {
   color: var(--color2);
   text-decoration: none;
+}
+
+.tertiaryButton:focus {
+  color: var(--color2);
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color2);
 }
