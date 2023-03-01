@@ -40,6 +40,7 @@ export default function SignIn() {
           <input
             type="email"
             id="email"
+            className="authInput"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -50,6 +51,7 @@ export default function SignIn() {
           <input
             type="password"
             id="password"
+            className="authInput"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>

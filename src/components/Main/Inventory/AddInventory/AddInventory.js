@@ -26,47 +26,54 @@ export default function AddInventory() {
 
   return (
     <section className="addInventoryContainer">
+      {/* add inventory form */}
       <h2>Add to Inventory</h2>
       {/* form */}
-      <form>
-        {/* input: name */}
-        <div>
-          <label htmlFor="name">Name of item</label>
-          <input
-            type="text"
-            name="name"
-            className="itemInput"
-            value={itemName}
-            onChange={(e) => setItemName(e.target.value)}
-          />
+      <form className="addInventoryForm">
+        <div className="formInputs">
+          {/* input: name */}
+          <div className="nameInput">
+            <label htmlFor="name">Name of item</label>
+            <input
+              type="text"
+              name="name"
+              className="itemInput"
+              value={itemName}
+              onChange={(e) => setItemName(e.target.value)}
+            />
+          </div>
+          {/* radio buttons: stocked, low stock */}
+          <div className="stockedValueInput">
+            <fieldset>
+              <legend>Current stock</legend>
+              {/* stocked */}
+              <input
+                type="radio"
+                name="currentStock"
+                id="stocked"
+                value={true}
+                onChange={(e) => setStocked(e.target.value)}
+              />
+              <label htmlFor="stocked" className="radio">
+                Stocked
+              </label>
+              {/* low stock */}
+              <input
+                type="radio"
+                name="currentStock"
+                id="lowStock"
+                value={false}
+                onChange={(e) => setStocked(e.target.value)}
+              />
+              <label htmlFor="lowStock" className="radio">
+                Low stock
+              </label>
+            </fieldset>
+          </div>
         </div>
 
-        {/* radio buttons: stocked, low stock */}
-        {/* send stocked value to Supabase */}
-        <fieldset>
-          <legend>Current stock</legend>
-          {/* stocked */}
-          <input
-            type="radio"
-            name="currentStock"
-            id="stocked"
-            value={true}
-            onChange={(e) => setStocked(e.target.value)}
-          />
-          <label htmlFor="stocked">Stocked</label>
-          {/* low stock */}
-          <input
-            type="radio"
-            name="currentStock"
-            id="lowStock"
-            value={false}
-            onChange={(e) => setStocked(e.target.value)}
-          />
-          <label htmlFor="lowStock">Low stock</label>
-        </fieldset>
-
         {/* button: add item */}
-        <div>
+        <div className="formAddItem">
           <button type="submit" className={styles.primaryButton} onClick={handleNewItem}>
             Add Item
           </button>

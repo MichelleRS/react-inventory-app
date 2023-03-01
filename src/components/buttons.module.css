@@ -5,6 +5,10 @@ button:hover {
   cursor: pointer;
 }
 
+.addItemButton {
+  width: 450px;
+}
+
 .primaryButton {
   /* size and spacing */
   width: 150px;
@@ -19,30 +23,52 @@ button:hover {
   border: none;
 }
 
-/* TODO primary button hover, focus, active */
+/* primary button hover, focus, active */
+.primaryButton:hover,
+.primaryButton:focus,
+.primaryButton:active {
+  background-color: var(--color7);
+  color: var(--color6);
+  border: 1px solid var(--color6);
+}
 
 /* secondary button */
 .secondaryButton {
-  /* size and spacing */
-  /* width: 125px; */
-  /* height: 40px; */
+  /* spacing */
+  padding: 5px;
   /* color */
   background-color: var(--color7);
   color: var(--color6);
   /* text */
-  /* font-size: 1.25rem; */
   font-weight: bolder;
   /* style */
   border: 1px solid var(--color6);
 }
 
-/* TODO secondary button hover, focus, active */
+.secondaryButton:hover,
+.secondaryButton:focus,
+.secondaryButton:active {
+  background-color: var(--color6);
+  color: var(--color7);
+  border: 1px solid var(--color6);
+}
 
-/* TODO tertiary button */
+/* tertiary button */
 .tertiaryButton {
   border: none;
   background-color: transparent;
   text-decoration: underline;
 }
 
-/* TODO tertiary button hover, focus, active */
+.tertiaryButton:hover,
+.tertiaryButton:active {
+  color: var(--color2);
+  text-decoration: none;
+}
+
+.tertiaryButton:focus {
+  color: var(--color2);
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color2);
+}
