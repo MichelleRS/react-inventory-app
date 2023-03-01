@@ -57,10 +57,6 @@
 
 /* form elements */
 
-form {
-  font-weight: 500;
-}
-
 label {
   margin: 0px 20px 0px 5px;
 }
@@ -80,8 +76,12 @@ label {
 .itemInput:hover,
 .itemInput:focus,
 .itemInput:active {
-  border: 3px dashed var(--color6);
-  background-color: var(--accentColor);
+  /* border: 3px dashed var(--color6);
+  background-color: var(--accentColor); */
+  border: 3px solid var(--color7);
+  background-color: var(--color6);
+  color: var(--color7);
+  font-weight: bold;
 }
 
 fieldset {
