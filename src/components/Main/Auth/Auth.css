@@ -1,6 +1,5 @@
 /* containers */
 .authFlexboxContainer {
-  background-color: var(--color4);
   display: flex;
   /* horizontal */
   justify-content: center;
@@ -13,14 +12,6 @@
   padding: 20px 50px 20px;
 }
 
-.authSignIn {
-  /* border: 1px solid var(--color6); */
-}
-
-.authSignUp {
-  /* border: 1px solid var(--color6); */
-}
-
 /* form */
 .control,
 fieldset {
@@ -31,23 +22,23 @@ label {
   font-size: 1.25rem;
 }
 
-input {
+.authInput {
+  display: block;
+  width: 225px;
   font-size: 1.25rem;
+  border: 3px solid var(--color6);
+  background-color: var(--color7);
   color: var(--color6);
-  background-color: var(--color4);
-  border: 1px solid var(--color6);
   border-radius: 5px;
   padding: 5px 5px 5px 30px;
   margin: 5px 0px 0px 0px;
-  /* TODO icon */
 }
 
-input:focus,
-input:hover {
-  background-color: var(--color4);
-  border: 1px solid var(--color1);
+.authInput:hover,
+.authInput:focus,
+.authInput:active {
+  border: 3px solid var(--color7);
+  background-color: var(--color6);
+  color: var(--color7);
+  font-weight: bold;
 }
-
-/* TODO input#email{} */
-
-/* TODO input#password{} */
