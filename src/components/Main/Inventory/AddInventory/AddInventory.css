@@ -1,11 +1,8 @@
 /* containers */
-/* TODO remove unnecessary bgc and borders when css is complete */
 
 .addInventoryContainer {
-  /* background-color: var(--color9); */
   border: 5px solid var(--color6);
   border-radius: 40px;
-  /* box-shadow: offset-x offset-y blur-radius shadow-radius color */
   box-shadow: -5px 5px 0px 0px var(--color6);
   margin: 10px auto;
   padding: 30px;
@@ -17,14 +14,11 @@
 }
 
 .addInventoryForm {
-  /* border: 5px dotted red; */
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
 }
 
 .formInputs {
-  /* border: 7px solid purple; */
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -32,27 +26,19 @@
 }
 
 .nameInput {
-  /* background-color: yellow; */
   display: flex;
   width: 100%;
   align-items: center;
 }
 
 .stockedValueInput {
-  /* border: 5px dotted purple; */
   margin: 0px;
   padding: 0px;
 }
 
 .formAddItem {
-  /* border: 4px dotted green; */
-  /* height: 400px; */
   width: 20%;
-  /* width: 100%; */
-  /* align-items: center;
-  justify-content: center; */
   align-self: flex-end;
-  /* margin-right: -5px; */
 }
 
 /* form elements */
@@ -76,8 +62,6 @@ label {
 .itemInput:hover,
 .itemInput:focus,
 .itemInput:active {
-  /* border: 3px dashed var(--color6);
-  background-color: var(--accentColor); */
   border: 3px solid var(--color7);
   background-color: var(--color6);
   color: var(--color7);
@@ -85,10 +69,7 @@ label {
 }
 
 fieldset {
-  /* border: 12px solid pink; */
   border: 0px;
-  /* margin-top: 50px; */
-  /* display: block; */
 }
 
 legend {
