@@ -6,8 +6,6 @@
 - [Project Status](#project-status)
 - [Planning](#planning)
 - [Problems and Solutions](#problems-and-solutions)
-- [Acknowledgements](#acknowledgments)
-- [Retrospective](#retrospective)
 
 ---
 
@@ -26,10 +24,7 @@ Users can:
 
 ## Project Status
 
-In progress:
-
-- MVP app functionality complete
-- beginning CSS
+MVP Complete. app functions as intended with simple css
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -72,13 +67,5 @@ Components:
 
 - Solution: In `public/`, create a `_redirects` file with this line of code: `/*    /index.html    200`
 - Source: Top answer from Adwaith on [_Stack Overflow_](https://stackoverflow.com/questions/50752350/page-not-found-when-trying-to-access-a-site-deployed-on-netlify)
-
-[Back to Table of Contents](#table-of-contents)
-
-## Acknowledgments
-
-[Back to Table of Contents](#table-of-contents)
-
-## Retrospective
 
 [Back to Table of Contents](#table-of-contents)
